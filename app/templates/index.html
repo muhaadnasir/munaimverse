@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Munaimverse</title>
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/style.css")}}">
 </head>
 <body>
-    <h1>welcome to Munaimverse</h1>
+    <section class="welcome-section" id="welcome-section">
+        <div class="welcome-view">
+            <h1>Welcome to <br><span>MUNAIMVERSE</span></h1>
+            <p>My personal digital space</p>
+            <button class="btn" id="btn">Explore</button>
+        </div>
+    </section>
+    <main hidden id="main-content">
+        <h1>Explore my universe</h1>
+        <button><a href="{{ url_for('projects.projects')}}">project.zone()</a></button>
+        <button><a href="{{ url_for('blogs.blogs')}}">dev.log()</a></button>
+        <button><a href="{{ url_for('myArts.arts')}}">art.zone()</a></button>
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
 </body>
 </html>
