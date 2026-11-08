@@ -12,15 +12,31 @@ body {
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
+
 }
-.welcome-section{
-    width: 100%;
-    height: 100%;
+.trans-cont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    z-index: 10;  
+    pointer-events: none;
+    
+    .bar{
+        flex: 1;
+        height: 0%;
+        background-color: #fff;
+        transition: height .5s ease-in-out;
+    }
+    .bar.active{
+        height: 100%;
+    }
 }
-.welcome-view {
+.main-con {
     width: 85%;
     height: 85%;
     display: flex;
@@ -35,11 +51,11 @@ body {
         linear-gradient(90deg, transparent 70px, rgba(225, 90, 90, 0.4) 70px, rgba(225, 90, 90, 0.4) 72px, transparent 72px),
         repeating-linear-gradient(to bottom, transparent 0px, transparent 30px, #a8c8e8 30px, #a8c8e8 31px); */
     background-image: url("https://www.transparenttextures.com/patterns/paper-fibers.png");
-    position: relative;
+    position: absolute;
     overflow: hidden; /* Keeps the background lines neatly inside the border-radius */
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 3.rem;
         font-weight: 400;
         margin-bottom: 10px;
     }

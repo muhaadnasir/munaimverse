@@ -7,13 +7,36 @@
     <link rel="stylesheet" href="{{ url_for("static", filename="css/style.css")}}">
 </head>
 <body>
-    <section class="welcome-section" id="welcome-section">
+    <!-- <section class="welcome-section" id="welcome-section">
+        <div class="trans-cont">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
         <div class="welcome-view">
             <h1>Welcome to <br><span>MUNAIMVERSE</span></h1>
             <p>My personal digital space</p>
             <button class="btn" id="btn">Explore</button>
         </div>
-    </section>
+    </section> -->
+    <div class="trans-cont" id="trans">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div class="main-con" id="main-con">
+            <h1>Welcome to <br><span>MUNAIMVERSE</span></h1>
+            <p>My personal digital space</p>
+            <button class="btn" id="btn">Explore</button>
+    </div>
     <main hidden id="main-content">
         <h1>Explore my universe</h1>
         <button><a href="{{ url_for('projects.projects')}}">project.zone()</a></button>
