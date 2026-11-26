@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mv</title>
+    <link rel="stylesheet" href="{{ url_for("static", filename="css/home.css")}}">
+    <link href="https://fonts.googleapis.com/css2?family=Agrave+Pro:wght@100..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <section>
+        <div class="profile">
+            <img src="{{ url_for("static", filename="assets/pic.png")}}" alt="My picture" srcset="">
+        </div>
+        <div class="content">
+            <div class="intro">
+                <p>Hey, welcome to</p>
+                <h1>Munaimverse.</h1>
+                <p>My personal digital space.</p>
+            </div>
+            <div class="links">
+                <a href="/about">About</a>
+                <a href="/projects">Projects</a>
+                <a href="/blogs">Blogs</a>
+                <a href="/arts">Art Library</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

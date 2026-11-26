@@ -1,0 +1,145 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #0b0d1e;
+    --bg-secondary: #16122f;
+    --bg-card: #22183b;
+
+    --primary: #7745c3;
+    --primary-dark: #5539a8;
+    --primary-light: #8369b8;
+
+    --text-primary: #f4eff5;
+    --text-secondary: #dccad1;
+    --text-muted: #a49aaf;
+
+    --accent-orange: #de7a46;
+    --accent-cyan: #5ee5e9;
+    --border: #3d3064;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-primary);
+    padding: 1rem;
+    font-family: 'Agrave Pro', cursive;
+}
+
+section {
+    width: 90%;
+    max-width: 1100px;
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.profile {
+    width: 45%;
+    height: 450px;
+    background: var(--bg-card);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.intro p:first-child {
+    font-size: 0.95rem;
+    color: var(--accent-orange);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.25rem;
+    font-family: Agrave Pro;
+}
+
+.intro h1 {
+    font-size: clamp(2.25rem, 5vw, 3.25rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-family: 'Agrave Pro', cursive;
+    font-weight: 700;
+}
+
+.intro p:last-child {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    font-family: 'Agrave Pro', cursive;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    transition: all 0.25s ease;
+}
+
+.links a:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    border-color: var(--text-primary);
+}
+
+@media (max-width: 700px) {
+    section {
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .profile {
+        width: 100%;
+        height: 300px;
+    }
+
+    .content {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .links {
+        justify-content: center;
+    }
+}
