@@ -18,7 +18,7 @@ def blogs():
             "date": post.metadata.get("date", ""),
             "description": post.metadata.get("description", "")
         })
-    return render_template("blogs.html", posts=posts)
+    return render_template("blogs.html", posts=posts, site_name="Munaimverse")
 
 @blogs_bp.route("/<slug>")
 def blog_detail(slug):
@@ -33,5 +33,6 @@ def blog_detail(slug):
     return render_template(
         "blog_detail.html",
         post=post.metadata,
-        content=content
+        content=content,
+        site_name="Munaimverse"
         )
